@@ -35,7 +35,7 @@ impl UniswapV2Pair {
         Ok(())
     }
 
-    pub fn mint(&mut self, to: Address) -> Result<U256, Vec<u8>> {
+    pub fn mint_by_yash01(&mut self, to: Address) -> Result<U256, Vec<u8>> {
         // Check if the address is valid
         if to == Address::ZERO {
             return Err("Cannot mint to the zero address".into());
@@ -52,11 +52,11 @@ impl UniswapV2Pair {
         Ok(amount)
     }
 
-    pub fn token0(&self) -> Result<Address, Vec<u8>> {
+    pub fn token0_by_yash(&self) -> Result<Address, Vec<u8>> {
         Ok(self.token0.get())
     }
 
-    pub fn token1(&self) -> Result<Address, Vec<u8>> {
+    pub fn token1_by_yash(&self) -> Result<Address, Vec<u8>> {
         Ok(self.token1.get())
     }
 }
